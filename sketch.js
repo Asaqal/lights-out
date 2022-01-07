@@ -52,6 +52,7 @@ function checkWin() {
     return true;
 }
 
+// specific hints for certain bottom row combinations
 bottomRowSolutions_dict = {
     "00111": "03",
     "01010": "01",
