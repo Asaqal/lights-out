@@ -93,7 +93,9 @@ document.addEventListener("mouseout", function(e) {
 
 document.addEventListener("click", function(e) {
     if (e.target.parentElement.tagName == "TD") {
+        applyToTiles(e.target.id, mouseOver);
         applyToTiles(e.target.id, mouseClick);
+        applyToTiles(e.target.id, mouseOut); // no weird animation on mobile
         addMove();
     }
 })
