@@ -52,6 +52,16 @@ function checkWin() {
     return true;
 }
 
+bottomRowSolutions_dict = {
+    "00111": "03",
+    "01010": "01",
+    "01101": "00",
+    "10001": "03",
+    "10110": "04",
+    "11011": "02",
+    "11100": "01"
+};
+
 // returns the next tile that should be pressed to solve the puzzle
 function nextMove() {
     for (let y = 0; y < 4; y++) {
@@ -61,6 +71,8 @@ function nextMove() {
             }
         }
     }
+
+    return bottomRowSolutions_dict[arrToStr(board[4])];
 }
 
 // resets the board to its orignal state prior to being tested for solvability
@@ -87,19 +99,19 @@ function updateTilesToBoard() {
 
 // listens to user's movement over the board
 document.addEventListener("mouseover", function(e) {
-    if (e.target.parentElement.tagName == "TD") {
+    if (e.target.parentElement && e.target.parentElement.tagName && e.target.parentElement.tagName == "TD") {
         applyToTiles(e.target.id, mouseOver);
     }
 })
 
 document.addEventListener("mouseout", function(e) {
-    if (e.target.parentElement.tagName == "TD") {
+    if (e.target.parentElement && e.target.parentElement.tagName && e.target.parentElement.tagName == "TD") {
         applyToTiles(e.target.id, mouseOut);
     }
 })
 
 document.addEventListener("click", function(e) {
-    if (e.target.parentElement.tagName == "TD") {
+    if (e.target.parentElement && e.target.parentElement.tagName && e.target.parentElement.tagName == "TD") {
         applyToTiles(e.target.id, mouseOver);
         applyToTiles(e.target.id, mouseClick);
         applyToTiles(e.target.id, mouseOut); // no weird animation on mobile
