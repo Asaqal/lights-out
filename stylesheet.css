@@ -184,58 +184,6 @@ body {
 
 /* ==================================================================================================================== */
 
-#board {
-    display: table;
-    table-layout: fixed;
-    width: 50vh;
-    position: relative;
-    height: 50vh;
-    margin-top: 5%;
-}
-
-tbody {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-}
-
-tr {
-    display: inline-block;
-    width: 100%;
-    height: 18%;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-}
-
-td {
-    display: inline-block;
-    position: relative;
-    margin: 0 auto;
-    width: 18%;
-    height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-td button {
-    background-color: var(--primary);
-    border: 0.7vh solid var(--primary);
-    border-radius: 1vh;
-
-    cursor: pointer;
-    display: inline-block;
-
-    width: 95%;
-    height: 95%;
-    margin: 2.5%;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
 .hover {
     border: 0.7vh solid var(--secondary);
 }
@@ -263,12 +211,6 @@ p {
     color: var(--accent);
 }
 /* ==================================================================================================================== */
-
-#title {
-    font-size: 9.5vh;
-    margin-top: 5%;
-}
-
 .menu {
     display: inline-block;
 
@@ -410,4 +352,76 @@ p {
     position: fixed;
     left: 0;
     top: 0;
+}
+
+/* ==================================================================================================================== */
+
+#webpage {
+    display: flex;
+    flex-direction: column;
+}
+
+#title {
+    order: 1;
+    font-size: 9.5vh;
+    /* margin-top: 5%; */
+}
+
+#board {
+    order: 2;
+
+    display: table;
+    table-layout: fixed;
+    width: 50vh;
+    position: relative;
+    height: 50vh;
+    margin: 2%;
+    /* margin-top: 5%; */
+}
+
+tbody {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+tr {
+    display: inline-block;
+    width: 100%;
+    height: 18%;
+    position: relative;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+td {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    width: 18%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+td button {
+    background-color: var(--primary);
+    border: 0.7vh solid var(--primary);
+    border-radius: 1vh;
+
+    cursor: pointer;
+    display: inline-block;
+
+    width: 95%;
+    height: 95%;
+    margin: 2.5%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#footer {
+    order: 3;
 }
