@@ -232,38 +232,6 @@ p {
 
 /* ==================================================================================================================== */
 
-#f_text {
-    display: table;
-    width: 50%;
-    table-layout: fixed;
-}
-    #f_text * {
-        font-size: 3vh;
-        display: table-cell;
-    }
-#f_buttons {
-    margin-top: 4%;
-    display: table;
-    width: 75%;
-    table-layout: fixed;
-}
-    #f_buttons * {
-        font-size: 2vh;
-        width: 15vh;
-        height: 4vh;
-        overflow: hidden;
-        white-space: nowrap;
-        display: table-cell;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-#author {
-    font-size: 4.5vh;
-    margin-top: 4%;
-}
-
-/* ==================================================================================================================== */
-
 #start {
     max-width: 400px;
     position: absolute;
@@ -359,12 +327,13 @@ p {
 #webpage {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 #title {
     order: 1;
     font-size: 9.5vh;
-    /* margin-top: 5%; */
+    margin-top: 12%;
 }
 
 #board {
@@ -375,7 +344,7 @@ p {
     width: 50vh;
     position: relative;
     height: 50vh;
-    margin: 2%;
+    margin-top: 3vh;
     /* margin-top: 5%; */
 }
 
@@ -424,4 +393,52 @@ td button {
 
 #footer {
     order: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#f_text {
+    /* display: table;
+    width: 50%;
+    table-layout: fixed; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    #f_text * {
+        /* margin: %; */
+        font-size: 3vh;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        /* padding: 5%; */
+        display: table-cell;
+        white-space: nowrap;
+    }
+    /* #moves {
+        padding-right: 50%;
+    } */
+#f_buttons {
+    margin-top: 4vh;
+    /* display: table; */
+    /* width: 75%; */
+    /* table-layout: fixed; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+    #f_buttons * {
+        font-size: 2vh;
+        width: 15vh;
+        height: 4vh;
+        overflow: hidden;
+        white-space: nowrap;
+        display: table-cell;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+#author {
+    font-size: 4.5vh;
+    margin-top: 8%;
 }
